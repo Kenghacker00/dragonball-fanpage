@@ -234,7 +234,7 @@ body::before {
 /* Footer styles */
 .footer {
     text-align: center;
-    background-image: url('images/footer.png');
+    background-image: url('../images/footer.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -249,7 +249,7 @@ body::before {
 
 .footer-iframe, .footer-about {
     text-align: center;
-    background-image: url('images/footer.png');
+    background-image: url('../images/footer.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -456,7 +456,7 @@ body::before {
 
 /* Play button style */
 .movie-card2::before {
-    content: url('images/Play Button.png');
+    content: url('../images/Play Button.png');
     position: absolute;
     top: 40%;
     left: 50%;
