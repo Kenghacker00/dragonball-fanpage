@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Trailer - Dragon Ball</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="icon" type="image/png" href="../images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+    <link rel="manifest" href="../images/site.webmanifest" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="header-link" style="text-decoration: none; color: inherit;">
+            <div class="logo-container">
+                <img src="../images/Logo3.jpg" alt="Logo" class="logo">
+                <h1 class="title">Dragon Ball Fan Page</h1>
+            </div>
+        </a>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="personajes.html" class="nav-link">Personajes</a>
+            <a href="peliculas.html" class="nav-link">Películas</a>
+            <a href="about.html" class="nav-link">Acerca de nosotros</a>
+        </nav>
+    </header>
+
+    <main class="trailer-container">
+        <h2 id="movie-title">Cargando...</h2>
+        <iframe id="trailer-frame" width="800" height="450" frameborder="0" allowfullscreen></iframe>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-iframe">
+        © 2025 Dragon Ball Fan Page. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        // Obtener el parámetro de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const movie = urlParams.get('movie');
+
+        // Definir los trailers de las películas
+        const trailers = {
+            superhero: {
+                title: "Dragon Ball Super: Super Hero",
+                url: "https://www.youtube.com/embed/W9JHZwtObqs?si=ibtK8wnl-tc9_ghN"
+            },
+            broly: {
+                title: "Dragon Ball Super: Broly",
+                url: "https://www.youtube.com/embed/FHgm89hKpXU"
+            },
+            resurrectionf: {
+                title: "Dragon Ball Z: Resurrection 'F'",
+                url: "https://www.youtube.com/embed/cD8Vv5bdmbI?si=-LLw9JcQ2Re9zDk_"
+            },
+            godsbattle: {
+                title: "Dragon Ball Z: Battle of Gods",
+                url: "https://www.youtube.com/embed/cD8Vv5bdmbI?si=TQ2BzS4tsnlBilwl"
+            },
+            wrath: {
+                title: "Dragon Ball Z: Wrath of the Dragon",
+                url: "https://www.youtube.com/embed/52VKPAbEWug?si=JMoMcpjMdyNil-aP"
+            },
+            fusionreborn: {
+                title: "Dragon Ball Z: Fusion Reborn",
+                url: "https://www.youtube.com/embed/rE95a4iC1dk?si=uMAcaMrwiERcoIpM"
+            },
+            biobroly: {
+                title: "Dragon Ball Z: Bio-Broly",
+                url: "https://www.youtube.com/embed/3F9pMjsYEQY?si=RNQ6z-lRj-bQhf7O"
+            },
+            galaxia: {
+                title: "Dragon Ball Z: La Galaxia Corre Peligro",
+                url: "https://www.youtube.com/embed/Ia1Rmgwy7R0?si=oBhazOmn2geIVgDg"
+            },
+            legendary: {
+                title: "Dragon Ball Z: The Legendary Super Saiyan",
+                url: "https://www.youtube.com/embed/mDlTYHVoUGA?si=8cjpNwBQcXot_rE_"
+            },
+            pelea: {
+                title: "Dragon Ball Z: La Pelea de los Tres Saiyajin",
+                url: "https://www.youtube.com/embed/E8RKSol-8l0?si=X1vSNK8-DzO2Tdwv"
+            },
+            cooler: {
+                title: "Dragon Ball Z: The Return of Cooler",
+                url: "https://www.youtube.com/embed/sGqAtYAkwDo?si=XAXQkfgUwz3uNO_R"
+            },
+            rivales: {
+                title: "Dragon Ball Z: Los Rivales más Poderosos",
+                url: "https://www.youtube.com/embed/Pgre7lopxY0?si=9g0pZWBvibHr3XL9"
+            },
+            goku: {
+                title: "Dragon Ball Z: Goku es un Super Saiyajin",
+                url: "https://www.youtube.com/embed/06syl4dmm50?si=KBpbR_8v_8ogfgUH"
+            },
+            batalla: {
+                title: "Dragon Ball Z: La Batalla de Freezer contra el Padre de Goku",
+                url: "https://www.youtube.com/embed/qhCAh0jPJts?si=-8WK2QIwGsDjGFQ0"
+            },
+            tree: {
+                title: "Dragon Ball Z: The Tree of Might",
+                url: "https://www.youtube.com/embed/6nkQu1l5Grs?si=qpz2zPZylxE9Bmik"
+            },
+            world: {
+                title: "Dragon Ball Z: The World's Strongest",
+                url: "https://www.youtube.com/embed/kwEED29e27Y?si=yydF3v5IfY4xiBMk"
+            },
+            devuelvanme: {
+                title: "Dragon Ball Z: ¡Devuelvanme a mi Gohan!",
+                url: "https://www.youtube.com/embed/rOQNk2fDUGg?si=xXP1ptKTPE2oRWF5"
+            },
+            adventure: {
+                title: "Dragon Ball: Mystical Adventure",
+                url: "https://www.youtube.com/embed/DIjku6BtYW4?si=EK3O0AS5JCJJ7orJ"
+            },
+            sleeping: {
+                title: "Dragon Ball: Sleeping Princess in Devil's Castle",
+                url: "https://www.youtube.com/embed/nE8WLaCQKCU?si=Iluma87hULRAuc8j"
+            },
+            curse: {
+                title: "Dragon Ball: Curse of the Blood Rubies",
+                url: "https://www.youtube.com/embed/C7mJ_qDnBBA?si=WqzsLujXJYdBZmqv"
+            }
+        };
+
+        // Cambiar el título y el video si la película existe
+        if (trailers[movie]) {
+            document.getElementById("movie-title").innerText = trailers[movie].title;
+            document.getElementById("trailer-frame").src = trailers[movie].url;
+        } else {
+            document.getElementById("movie-title").innerText = "Película no encontrada";
+            document.getElementById("trailer-frame").style.display = "none";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball Fan Page</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="icon" type="image/png" href="../images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+    <link rel="manifest" href="../images/site.webmanifest" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="header-link" style="text-decoration: none; color: inherit;">
+            <div class="logo-container">
+                <img src="../images/Logo3.jpg" alt="Logo" class="logo">
+                <h1 class="title">Dragon Ball Fan Page</h1>
+            </div>
+        </a>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="personajes.html" class="nav-link">Personajes</a>
+            <a href="peliculas.html" class="nav-link">Películas</a>
+            <a href="about.html" class="nav-link">Acerca de nosotros</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Mejores películas -->
+        <section class="movies-section">
+            <h2 class="section-title">Mejores películas de la serie</h2>
+            <div class="movies-grid">
+                <!-- Tarjeta de película -->
+                <div class="movie-card"  onclick="redirectToTrailer('broly')">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/1/13/DB_THE_MOVIE_NO._20.jpg" alt="DB Super: Broly" class="movie-image">
+                    <h3 class="movie-title">DB Super: Broly</h3>
+                    <p class="movie-info">2018 | ⭐ 7.888</p>
+                </div>
+                <div class="movie-card" onclick="redirectToTrailer('legendary')">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_j82Ge2qB0U8ZpLtlV8xITMWdPTAenofUjf84kc8ytd8zkLUsxpLRyD4rW-ClKSVmZ7fJBvgiKFD0maAMPjm9SAeU8Dm1CSQoZCwMd3PAm6ldgA1LGLVjZSpMrPO5TMDqjGsudFigT_J1/s1000/doragon_boru_z_8_moetsukiro_nessen_retsusen_cho_gekisen_broly_the_legendary_super_saiyan-631392801-large.jpg" alt="DB Z: SSJ Legendario" class="movie-image">
+                    <h3 class="movie-title">DB Z: SSJ Legendario</h3>
+                    <p class="movie-info">1993 | ⭐ 7.208</p>
+                </div>
+                <div class="movie-card" onclick="redirectToTrailer('godsbattle')">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/4/43/DBZ_THE_MOVIE_NO._14.png" alt="DB Z: Battle of Gods" class="movie-image">
+                    <h3 class="movie-title">DB Z: Battle of Gods</h3>
+                    <p class="movie-info">2013 | ⭐ 6.79</p>
+                </div>
+                <div class="movie-card" onclick="redirectToTrailer('resurrectionf')">
+                    <img src="../images/FreezerPoster.webp" alt="DB Z: Freezer" class="movie-image">
+                    <h3 class="movie-title">DB Z: Freezer</h3>
+                    <p class="movie-info">2015 | ⭐ 6.823</p>
+                </div>
+                <div class="movie-card" onclick="redirectToTrailer('superhero')">
+                    <img src="https://www.hcpress.com/wp-content/uploads/2022/09/image-8-723x1024.png" alt="DB Super: Super Hero" class="movie-image">
+                    <h3 class="movie-title">DB Super: Super Hero</h3>
+                    <p class="movie-info">2023 | ⭐ 7.928</p>
+                </div>
+                <div class="movie-card" onclick="redirectToTrailer('rivales')">
+                    <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p13602309_v_v8_ad.jpg" alt="DB Z: Cooler's Revenge" class="movie-image">
+                    <h3 class="movie-title">DB Z: Cooler's Revenge</h3>
+                    <p class="movie-info">1991 | ⭐ 6.923</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mejores peleas -->
+        <section class="fights-section">
+        <h2 class="section-title">Muchos fans opinan que las mejores peleas de la serie son:</h2>
+        <div class="fights-grid">
+            <div class="fight-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hKc0MAWjA2U?si=j9puoHe3G5WfIFAX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h1>Goku vs Vegeta - Saga de Majin Boo</h1>
+                <p>¡Una de las batallas más épicas de la serie! Goku y Vegeta se enfrentan en un combate lleno de acción y emoción, donde la rivalidad y el respeto mutuo se ponen a prueba. No te pierdas esta increíble lucha que define la saga.</p>
+            </div>
+            <div class="fight-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FMppqNVEKeo?si=73ZPS-Y796wd_AfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h1>Gogeta vs Broly - Dragon Ball Super</h1>
+                <p>¡Una batalla que redefine la animación! Gogeta se enfrenta a Broly en un combate espectacular que combina una calidad de animación impresionante con movimientos de combate asombrosos. Prepárate para ver el verdadero poder de los Saiyajins.</p>
+            </div>
+            <div class="fight-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IZPk5zW5BSY?si=q_5wpnNZSD2Zs_AP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h1>Goku vs Jiren - Torneo del Poder</h1>
+                <p>¡Una batalla épica por la supervivencia del universo! Goku se enfrenta a Jiren, el guerrero más poderoso del universo 11, en un combate que pone a prueba los límites de su fuerza y determinación. ¿Podrá Goku superar sus límites una vez más?</p>
+            </div>
+            <div class="fight-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nVzNYe_e6Sc?si=jZeZo11Bo3n68GCe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h1>Vegetto vs Majin Boo - La Fusión Definitiva</h1>
+                <p>¡Una lucha donde el poder y el carisma se combinan! Vegetto, la fusión de Goku y Vegeta, se enfrenta a Majin Boo en un combate lleno de estrategia y fuerza bruta. Descubre cómo esta fusión se convierte en la última esperanza para salvar el mundo.</p>
+            </div>
+        </div>
+        </section>
+    </main>        
+
+    <!-- Footer -->
+    <footer class="footer">
+        © 2025 Dragon Ball Fan Page. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        function redirectToTrailer(movie) {
+            window.location.href = `iframe.html?movie=${movie}`;
+        }
+    </script>    
+</body>
+</html>
