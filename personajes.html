@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personajes - Dragon Ball Fan Page</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="icon" type="image/png" href="../images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+    <link rel="manifest" href="../images/site.webmanifest" />
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <a href="index.html" class="header-link" style="text-decoration: none; color: inherit;">
             <div class="logo-container">
-                <img src="images/Logo3.jpg" alt="Logo" class="logo">
+                <img src="../images/Logo3.jpg" alt="Logo" class="logo">
                 <h1 class="title">Dragon Ball Fan Page</h1>
             </div>
         </a>
+
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <!-- Menú de navegación -->
         <nav class="nav">
             <a href="index.html" class="nav-link">Inicio</a>
             <a href="personajes.html" class="nav-link">Personajes</a>
@@ -32,8 +37,8 @@
         <h2 class="section-title">Personajes Principales</h2>
         <div class="characters-container">
             <!-- Goku -->
-            <div class="character-card" data-sound="sounds/Goku.m4a">
-                <img src="images/Goku.webp" alt="Goku">
+            <div class="character-card" data-sound="../sounds/Goku.m4a">
+                <img src="../images/Goku.webp" alt="Goku">
                 <div class="character-name">Goku</div>
                 <div class="power-container">
                     <div class="power-bar goku"></div>
@@ -44,8 +49,8 @@
             </div>
         
             <!-- Vegeta -->
-            <div class="character-card" data-sound="sounds/Vegeta.m4a">
-                <img src="images/vegeta.webp" alt="Vegeta">
+            <div class="character-card" data-sound="../sounds/Vegeta.m4a">
+                <img src="../images/vegeta.webp" alt="Vegeta">
                 <div class="character-name">Vegeta</div>
                 <div class="power-container">
                     <div class="power-bar vegeta"></div>
@@ -57,7 +62,7 @@
         
             <!-- Piccolo -->
             <div class="character-card">
-                <img src="images/piccolo.webp" alt="Piccolo">
+                <img src="../images/piccolo.webp" alt="Piccolo">
                 <div class="character-name">Piccolo</div>
                 <div class="power-container">
                     <div class="power-bar piccolo"></div>
@@ -69,7 +74,7 @@
 
             <!-- Krillin -->
             <div class="character-card">
-                <img src="images/Krilin.webp" alt="Krilin">
+                <img src="../images/krilin.webp" alt="Krilin">
                 <div class="character-name">Krilin</div>
                 <div class="power-container">
                     <div class="power-bar krilin"></div>
@@ -80,8 +85,8 @@
             </div>
 
             <!-- Freezer -->
-            <div class="character-card" data-sound="sounds/freezer.m4a">
-                <img src="images/frieza.webp" alt="Freezer">
+            <div class="character-card" data-sound="../sounds/freezer.m4a">
+                <img src="../images/frieza.webp" alt="Freezer">
                 <div class="character-name">Freezer</div>
                 <div class="power-container">
                     <div class="power-bar frieza"></div>
@@ -93,7 +98,7 @@
         
             <!-- Gohan -->
             <div class="character-card">
-                <img src="images/gohan.webp" alt="Gohan">
+                <img src="../images/gohan.webp" alt="Gohan">
                 <div class="character-name">Gohan</div>
                 <div class="power-container">
                     <div class="power-bar gohan"></div>
@@ -105,7 +110,7 @@
         
             <!-- Broly -->
             <div class="character-card">
-                <img src="images/broly.webp" alt="Broly">
+                <img src="../images/broly.webp" alt="Broly">
                 <div class="character-name">Broly</div>
                 <div class="power-container">
                     <div class="power-bar broly"></div>
@@ -117,7 +122,7 @@
         
             <!-- Bills -->
             <div class="character-card">
-                <img src="images/bills.webp" alt="Bills">
+                <img src="../images/bills.webp" alt="Bills">
                 <div class="character-name">Bills</div>
                 <div class="power-container">
                     <div class="power-bar beerus"></div>
@@ -129,7 +134,7 @@
         
             <!-- Whis -->
             <div class="character-card">
-                <img src="images/whis.webp" alt="Whis">
+                <img src="../images/whis.webp" alt="Whis">
                 <div class="character-name">Whis</div>
                 <div class="power-container">
                     <div class="power-bar whis"></div>
@@ -141,7 +146,7 @@
         
             <!-- Zeno Sama -->
             <div class="character-card">
-                <img src="images/Zeno.webp" alt="Zeno">
+                <img src="../images/Zeno.webp" alt="Zeno">
                 <div class="character-name">Zeno Sama</div>
                 <div class="power-container">
                     <div class="power-bar zeno"></div>
@@ -153,7 +158,7 @@
 
             <!-- Gamma 1 -->
             <div class="character-card">
-                <img src="images/gamma1.webp" alt="Gamma 1">
+                <img src="../images/gamma1.webp" alt="Gamma 1">
                 <div class="character-name">Gamma 1</div>
                 <div class="power-container">
                     <div class="power-bar gamma1"></div>
@@ -165,7 +170,7 @@
 
             <!-- Gamma 2 -->
             <div class="character-card">
-                <img src="images/gamma2.webp" alt="Gamma 2">
+                <img src="../images/gamma2.webp" alt="Gamma 2">
                 <div class="character-name">Gamma 2</div>
                 <div class="power-container">
                     <div class="power-bar gamma2"></div>
@@ -177,7 +182,7 @@
 
             <!-- Dr. Hedo -->
             <div class="character-card">
-                <img src="images/drhedo.webp" alt="Dr. Hedo">
+                <img src="../images/drhedo.webp" alt="Dr. Hedo">
                 <div class="character-name">Dr. Hedo</div>
                 <div class="power-container">
                     <div class="power-bar drhedo"></div>
@@ -188,8 +193,8 @@
             </div>
         
             <!-- Goku Black -->
-            <div class="character-card" data-sound="sounds/BlackG.mp3">
-                <img src="images/Goku_Black.webp" alt="Goku Black">
+            <div class="character-card" data-sound="../sounds/BlackG.mp3">
+                <img src="../images/Goku_Black.webp" alt="Goku Black">
                 <div class="character-name">Goku Black</div>
                 <div class="power-container">
                     <div class="power-bar Black"></div>
@@ -201,7 +206,7 @@
         
             <!-- Gogeta -->
             <div class="character-card">
-                <img src="images/gogeta.webp" alt="Gogeta">
+                <img src="../images/Gogeta.webp" alt="Gogeta">
                 <div class="character-name">Gogeta</div>
                 <div class="power-container">
                     <div class="power-bar Gogeta"></div>
@@ -213,7 +218,7 @@
         
             <!-- Vegetto -->
             <div class="character-card">
-                <img src="images/vegetto.webp" alt="Vegetto">
+                <img src="../images/Vegetto.webp" alt="Vegetto">
                 <div class="character-name">Vegetto</div>
                 <div class="power-container">
                     <div class="power-bar Vegetto"></div>
@@ -225,7 +230,7 @@
         
             <!-- Jiren -->
             <div class="character-card">
-                <img src="images/Jiren.webp" alt="Jiren">
+                <img src="../images/Jiren.webp" alt="Jiren">
                 <div class="character-name">Jiren</div>
                 <div class="power-container">
                     <div class="power-bar Jiren"></div>
@@ -237,7 +242,7 @@
         
             <!-- Daishinkan -->
             <div class="character-card">
-                <img src="images/Daishinkan.webp" alt="Daishinkan">
+                <img src="../images/Daishinkan.webp" alt="Daishinkan">
                 <div class="character-name">Daishinkan</div>
                 <div class="power-container">
                     <div class="power-bar Daishinkan"></div>
@@ -249,7 +254,7 @@
 
             <!-- Vados -->
             <div class="character-card">
-                <img src="images/vados.webp" alt="Vados">
+                <img src="../images/vados.webp" alt="Vados">
                 <div class="character-name">Vados</div>
                 <div class="power-container">
                     <div class="power-bar vados"></div>
@@ -261,7 +266,7 @@
 
             <!-- Champa -->
             <div class="character-card">
-                <img src="images/champa.webp" alt="Champa">
+                <img src="../images/champa.webp" alt="Champa">
                 <div class="character-name">Champa</div>
                 <div class="power-container">
                     <div class="power-bar champa"></div>
@@ -273,7 +278,7 @@
 
             <!-- Granola -->
             <div class="character-card">
-                <img src="images/granola.webp" alt="Granola">
+                <img src="../images/granola.webp" alt="Granola">
                 <div class="character-name">Granola</div>
                 <div class="power-container">
                     <div class="power-bar granola"></div>
@@ -285,7 +290,7 @@
 
             <!-- Gas -->
             <div class="character-card">
-                <img src="images/gas.webp" alt="Gas">
+                <img src="../images/gas.webp" alt="Gas">
                 <div class="character-name">Gas</div>
                 <div class="power-container">
                     <div class="power-bar gas"></div>
@@ -297,7 +302,7 @@
 
             <!-- Zamasu -->
             <div class="character-card">
-                <img src="images/zamasu.webp" alt="Zamasu">
+                <img src="../images/zamasu.webp" alt="Zamasu">
                 <div class="character-name">Zamasu</div>
                 <div class="power-container">
                     <div class="power-bar zamasu"></div>
@@ -310,7 +315,7 @@
 
             <!-- Gotenks -->
             <div class="character-card">
-                <img src="images/gotenks.webp" alt="Gotenks">
+                <img src="../images/gotenks.webp" alt="Gotenks">
                 <div class="character-name">Gotenks</div>
                 <div class="power-container">
                     <div class="power-bar gotenks"></div>
@@ -322,7 +327,7 @@
 
             <!-- Androide 16 -->
             <div class="character-card">
-                <img src="images/android16.webp" alt="Androide 16">
+                <img src="../images/android16.webp" alt="Androide 16">
                 <div class="character-name">Androide 16</div>
                 <div class="power-container">
                     <div class="power-bar android16"></div>
@@ -334,7 +339,7 @@
 
             <!-- Androide 17 -->
             <div class="character-card">
-                <img src="images/android17.webp" alt="Androide 17">
+                <img src="../images/android17.webp" alt="Androide 17">
                 <div class="character-name">Androide 17</div>
                 <div class="power-container">
                     <div class="power-bar android17"></div>
@@ -346,7 +351,7 @@
 
             <!-- Androide 18 -->
             <div class="character-card">
-                <img src="images/android18.webp" alt="Androide 18">
+                <img src="../images/android18.webp" alt="Androide 18">
                 <div class="character-name">Androide 18</div>
                 <div class="power-container">
                     <div class="power-bar android18"></div>
@@ -358,7 +363,7 @@
 
             <!-- Androide 19 -->
             <div class="character-card">
-                <img src="images/android19.webp" alt="Androide 19">
+                <img src="../images/android19.webp" alt="Androide 19">
                 <div class="character-name">Androide 19</div>
                 <div class="power-container">
                     <div class="power-bar android19"></div>
@@ -370,7 +375,7 @@
 
             <!-- Androide 20 -->
             <div class="character-card">
-                <img src="images/android20.webp" alt="Androide 20">
+                <img src="../images/android20.webp" alt="Androide 20">
                 <div class="character-name">Androide 20</div>
                 <div class="power-container">
                     <div class="power-bar android20"></div>
@@ -382,7 +387,7 @@
 
             <!-- Androide 21 -->
             <div class="character-card">
-                <img src="images/android21.webp" alt="Androide 21">
+                <img src="../images/android21.webp" alt="Androide 21">
                 <div class="character-name">Androide 21</div>
                 <div class="power-container">
                     <div class="power-bar android21"></div>
@@ -413,6 +418,11 @@
                 });
             });
         });
+
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
