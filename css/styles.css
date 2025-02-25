@@ -23,13 +23,13 @@ body::before {
     z-index: -1;
 }
 
-/* Header styles */
+/* 📌 Header */
 .header {
-    padding: 30px 40px;
+    padding: 15px 20px;
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between; /* Alinea elementos a los lados */
 }
 
 .header::before {
@@ -46,42 +46,51 @@ body::before {
     z-index: -1;
 }
 
+/* 📌 Contenedor del logo y título */
 .logo-container {
-    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    position: absolute;
-    top: -30px;
-    left: -180px;
+    margin-right: 10px; /* Espacio entre logo y título */
 }
 
 .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #ffffff;
-    margin: 0;
+    margin: 11px;
 }
 
+/* 📌 Navegación (PC) */
 .nav {
     display: flex;
-    justify-content: center;
     gap: 15px;
-    margin-top: 10px;
-    width: 100%;
+    transition: all 0.3s ease-in-out;
 }
 
+/* 📌 Estilo de los enlaces */
 .nav-link {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    padding: 5px 10px;
 }
 
 .nav-link:hover {
     text-decoration: underline;
+}
+
+/* 📌 Estilos del botón hamburguesa */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
 }
 
 /* Main content styles */
@@ -255,7 +264,7 @@ body::before {
     background-repeat: no-repeat;
     padding: 15px;
     font-size: 0.8rem;
-    position: fixed;
+    position: relative;
     left: 0;
     right: 0;
     bottom: 0;
@@ -516,41 +525,42 @@ body::before {
     .header {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: center; /* Centrar horizontalmente */
+        justify-content: center; /* Centrar verticalmente */
         padding: 20px;
         gap: 10px; /* Espaciado entre el logo y el título */
     }
 
+    .logo-container {
+        display: flex;
+        justify-content: center; /* Centrar el logo horizontalmente */
+        width: 100%; /* Asegurar que ocupe todo el ancho */
+    }
+
     .logo {
         width: 100px; /* Ajustar tamaño del logo */
-        height: 100px;
-        border-radius: 50%;
-        position: static; /* Eliminar posición absoluta */
-        margin-left: 65px;
-        margin-top: -15px;
+        height: 100px; /* Ajustar tamaño del logo */
+        border-radius: 50%; /* Hacer el logo circular */
+        margin: 0 auto; /* Centrar completamente */
     }
 
     .title {
         font-size: 1.5rem; /* Reducir el tamaño en móvil */
-        text-align: center;
+        text-align: center; /* Asegurar que el texto esté centrado */
     }
-}
 
-/* 📌 Evitar que el menú se vea estirado en móviles */
-@media (max-width: 768px) {
     .nav {
-        flex-direction: row; /* Mantener el menú en línea */
-        flex-wrap: wrap;
-        justify-content: center;
+        display: flex;
+        flex-direction: column; /* Cambiar a columna en móviles */
+        align-items: center; /* Centrar los enlaces de navegación */
+        gap: 10px; /* Espaciado entre los enlaces */
     }
 
     .nav-link {
-        font-size: 1rem;
-        padding: 5px 10px;
+        font-size: 1rem; /* Ajustar el tamaño de la fuente */
+        padding: 5px 10px; /* Espaciado interno */
     }
 }
-
 
 /* Media queries */
 @media (max-width: 1024px) {
@@ -610,5 +620,41 @@ body::before {
 
     .fight-card h1, .fight-card p {
         font-size: 1rem; /* Reduce tamaño de texto en móviles */
+    }
+}
+
+/* 📌 Responsive: Ocultar el menú en mobile hasta que se haga clic */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Se muestra el icono de hamburguesa */
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding-top: 10px;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .nav.active {
+        max-height: 300px; /* Ajusta el valor según la cantidad de elementos */
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 8px 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .nav.active .nav-link {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
