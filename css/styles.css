@@ -521,27 +521,7 @@ body::before {
 
     .nav-link {
         font-size: 1rem;
-        padding: 1px 1px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .movies-grid, .movies-grid2, .characters-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .movies-grid, .movies-grid2, .characters-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .movie-card, .movie-card2, .character-card {
-        max-width: 200px;
-    }
-
-    .movie-title, .character-name {
-        font-size: 1rem;
+        padding: -10px 10px;
     }
 }
 
@@ -552,26 +532,34 @@ body::before {
 
     .movie-card, .movie-card2, .character-card {
         max-width: 100%;
+        max-height: 100%;
     }
 
     .movie-title, .character-name {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
     }
 }
 
-/* 📌 Alinear el logo y el título en móviles */
-@media (max-width: 768px) {
-    .logo {
-        width: 100px; /* Ajustar tamaño del logo */
-        height: 100px;
-        margin-left: 70px;
+@media screen and (max-width: 768px) {
+    .logo-container {
+        display: flex;
         margin-top: -25px;
-        border-radius: 50%;
-        position: static; /* Eliminar posición absoluta */
+        align-items: center;
+        width: 100%;
     }
 
     .title {
-        font-size: 1.5rem; /* Reducir el tamaño en móvil */
+        font-size: 1.6rem;
+        margin-right: -20px;
+        text-align: center;
+    }
+
+    .logo {
+        width: 100px; /* Ajustar tamaño del logo */
+        height: 100px;
+        margin-left: -20px;
+        border-radius: 50%;
+        position: static;
     }
 }
 
