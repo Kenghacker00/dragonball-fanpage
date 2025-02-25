@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Películas - Dragon Ball Fan Page</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="icon" type="image/png" href="../images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+    <link rel="manifest" href="../images/site.webmanifest" />
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <a href="index.html" class="header-link" style="text-decoration: none; color: inherit;">
             <div class="logo-container">
-                <img src="images/Logo3.jpg" alt="Logo" class="logo">
+                <img src="../images/Logo3.jpg" alt="Logo" class="logo">
                 <h1 class="title">Dragon Ball Fan Page</h1>
             </div>
         </a>
+
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <!-- Menú de navegación -->
         <nav class="nav">
             <a href="index.html" class="nav-link">Inicio</a>
             <a href="personajes.html" class="nav-link">Personajes</a>
@@ -32,7 +37,7 @@
     <h2 class="section-title2">Películas de Dragon Ball</h2>
     <div class="movies-grid2">
         <!-- Tarjeta de película -->
-        <div class="movie-card2" onclick="redirectToTrailer('super-hero')">
+        <div class="movie-card2" onclick="redirectToTrailer('superhero')">
             <img src="https://m.media-amazon.com/images/M/MV5BYzI2YjU1Y2EtZjY4NS00NzgyLWE1OWUtNDU3NTc3YTdjMWFlXkEyXkFqcGc@._V1_.jpg" alt="Dragon Ball Super: Super Hero" class="movie-image">
             <h3 class="movie-title2">Dragon Ball Super: Super Hero</h3>
             <p class="movie-description2">Gohan y Piccolo se enfrentan a una nueva amenaza de la Patrulla Roja.</p>
@@ -46,8 +51,8 @@
             <p class="movie-info">2018 | ⭐ 8.1</p>
         </div>
         <!-- Tarjeta de película -->
-        <div class="movie-card2" onclick="redirectToTrailer('resurrectionf')">
-            <img src="images/FreezerPoster.webp" alt="Resurrection F" class="movie-image">
+        <div class="movie-card2" onclick="redirectToTrailer('resureccionf')">
+            <img src="../images/FreezerPoster.webp" alt="Resurrection F" class="movie-image">
             <h3 class="movie-title2">Dragon Ball Z: Resurrection 'F'</h3>
             <p class="movie-description2">El regreso de Freezer más poderoso que nunca.</p>
             <p class="movie-info">2015 | ⭐ 7.2</p>
@@ -182,6 +187,11 @@
     <script>
         function redirectToTrailer(movie) {
             window.location.href = `iframe.html?movie=${movie}`;
+        }
+
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
         }
     </script>
     
