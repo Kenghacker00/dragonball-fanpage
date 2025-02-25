@@ -157,7 +157,7 @@ body::before {
 
 /* Estilo del botón de reproducción */
 .movie-card::before {
-    content: url('../images/Play Button.png');
+    content: url('./images/Play Button.png');
     position: absolute;
     top: 50%;
     left: 50%;
@@ -511,6 +511,32 @@ body::before {
     height: 500px;
 }
 
+/* 📌 Alinear el logo y el título en móviles */
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        gap: 10px; /* Espaciado entre el logo y el título */
+    }
+
+    .logo {
+        width: 100px; /* Ajustar tamaño del logo */
+        height: 100px;
+        border-radius: 50%;
+        position: static; /* Eliminar posición absoluta */
+        margin-left: 65px;
+        margin-top: -15px;
+    }
+
+    .title {
+        font-size: 1.5rem; /* Reducir el tamaño en móvil */
+        text-align: center;
+    }
+}
+
 /* 📌 Evitar que el menú se vea estirado en móviles */
 @media (max-width: 768px) {
     .nav {
@@ -521,65 +547,58 @@ body::before {
 
     .nav-link {
         font-size: 1rem;
-        padding: -10px 10px;
+        padding: 5px 10px;
+    }
+}
+
+
+/* Media queries */
+@media (max-width: 1024px) {
+    .movies-grid2 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .movies-grid2 {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
-    .movies-grid, .movies-grid2, .characters-container {
+    .movies-grid2 {
         grid-template-columns: 1fr;
     }
+}
 
-    .movie-card, .movie-card2, .character-card {
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    .movie-title, .character-name {
-        font-size: 1.3rem;
+@media (max-width: 1024px) {
+    .movies-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media screen and (max-width: 768px) {
-    .logo-container {
-        display: flex;
-        justify-content: center; /* Centra el logo */
-        align-items: center;
-        width: 100%;
-        margin-top: 0; /* Elimina margen negativo */
-    }
-
-    .logo {
-        width: 90px; /* Ajustar tamaño del logo */
-        height: 90px;
-        border-radius: 50%;
-        margin-left: 115px;
-        margin-top: 25px;
-    }
-
-    .title-container {
-        text-align: center; /* Centrar el título */
-        width: 100%;
-        margin-top: 10px; /* Espacio entre logo y título */
-    }
-
-    .title {
-        font-size: 1.6rem;
-        margin-left: 30px;
+@media (max-width: 768px) {
+    .movies-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
+@media (max-width: 480px) {
+    .movies-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 768px) {
     .fights-grid {
         display: flex;
         flex-direction: column; /* Acomoda en una sola columna */
         align-items: center;
-        gap: 10px; /* Espacio entre tarjetas */
+        gap: 20px; /* Espacio entre tarjetas */
     }
 
     .fight-card {
-        width: 100%; /* Reduce el ancho en móviles */
+        width: 90%; /* Reduce el ancho en móviles */
         max-width: 400px; /* No se hace demasiado grande */
     }
 
