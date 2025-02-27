@@ -166,7 +166,7 @@ body::before {
 
 /* Estilo del botón de reproducción */
 .movie-card::before {
-    content: url('./images/Play Button.png');
+    content: url('../images/Play-Button.png');
     position: absolute;
     top: 50%;
     left: 50%;
@@ -465,7 +465,7 @@ body::before {
 
 /* Play button style */
 .movie-card2::before {
-    content: url('../images/Play Button.png');
+    content: url('../images/Play-Button.png');
     position: absolute;
     top: 40%;
     left: 50%;
