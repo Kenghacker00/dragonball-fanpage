@@ -298,6 +298,18 @@ body::before {
 }
 
 /* Characters css */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .characters-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -332,6 +344,7 @@ body::before {
     object-fit: contain;
     border-radius: 12px;
     padding : 5px;
+    animation: float 3s ease-in-out infinite;
 }
 
 /* Character names */
