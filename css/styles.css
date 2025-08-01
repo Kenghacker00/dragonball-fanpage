@@ -11,8 +11,10 @@ body {
 body::before {
   content: "";
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: url("../images/Goku-fondo.jpg") no-repeat center center / cover;
   filter: blur(8px);
   z-index: -1;
@@ -93,7 +95,8 @@ body::before {
 }
 
 /* 🎬 Movies Grid */
-.movies-grid, .movies-grid2 {
+.movies-grid,
+.movies-grid2 {
   display: grid;
   gap: 20px;
   padding: 20px;
@@ -107,12 +110,13 @@ body::before {
 }
 
 /* 🎬 Movie Cards */
-.movie-card, .movie-card2 {
+.movie-card,
+.movie-card2 {
   position: relative;
   background: #2a2a2a;
   border: 4px solid orange;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -120,23 +124,27 @@ body::before {
   display: flex;
   flex-direction: column;
 }
-.movie-card:hover, .movie-card2:hover {
+.movie-card:hover,
+.movie-card2:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-.movie-image, .movie-image2 {
+.movie-image,
+.movie-image2 {
   width: 100%;
   height: 300px;
   object-fit: cover;
   border-bottom: 3px solid #ffd700;
 }
-.movie-title, .movie-title2 {
+.movie-title,
+.movie-title2 {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 10px 0;
   color: #ffd700;
 }
-.movie-description, .movie-description2 {
+.movie-description,
+.movie-description2 {
   font-size: 0.9rem;
   color: #fff;
   padding: 0 10px;
@@ -144,19 +152,20 @@ body::before {
   flex-grow: 1;
 }
 .movie-info {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   padding: 10px 15px;
   border-radius: 10px;
   font-size: 0.9rem;
   color: #fff;
   margin-top: auto;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 .movie-info:hover {
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
 }
 /* Botón Play en hover */
-.movie-card::before, .movie-card2::before {
+.movie-card::before,
+.movie-card2::before {
   content: url("../images/Play-Button.png");
   position: absolute;
   top: 30%;
@@ -167,7 +176,8 @@ body::before {
   transition: opacity 0.3s ease-in-out;
   z-index: 2;
 }
-.movie-card:hover::before, .movie-card2:hover::before {
+.movie-card:hover::before,
+.movie-card2:hover::before {
   opacity: 1;
 }
 
@@ -192,7 +202,8 @@ body::before {
   border: none;
   border-radius: 10px;
 }
-.fight-card h1, .fight-card p {
+.fight-card h1,
+.fight-card p {
   text-align: center;
   background: orange;
   margin: 10px 0;
@@ -222,12 +233,17 @@ body::before {
 
 /* 👤 Characters */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 .characters-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
   justify-items: center;
@@ -249,7 +265,7 @@ body::before {
 }
 .character-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 .character-card img {
   width: 100%;
@@ -467,14 +483,32 @@ body::before {
   text-align: center;
 }
 .trailer-container {
-  text-align: center;
-  margin: 50px auto;
+  position: relative;
+  width: 95%; /* un poco menos que el 100% para que respire */
   max-width: 1000px;
-}
-#trailer-frame {
+  margin: 20px auto;
+  overflow: hidden;
   border: 4px solid #ffcc00;
   border-radius: 12px;
-  box-shadow: 0 0 25px rgba(255,204,0,0.7);
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.7);
+  background: black; /* opcional, para que el borde resalte */
+}
+
+/* Mantener proporción 16:9 */
+.trailer-container::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+.trailer-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
 }
 
 /* 💬 Comments Section */
@@ -482,9 +516,9 @@ body::before {
   max-width: 900px;
   margin: 50px auto;
   padding: 25px;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   border-radius: 15px;
-  box-shadow: 0 0 25px rgba(255,153,0,0.6);
+  box-shadow: 0 0 25px rgba(255, 153, 0, 0.6);
 }
 .comments-section h3 {
   margin-bottom: 20px;
@@ -495,7 +529,9 @@ body::before {
 }
 
 /* 📌 Footer */
-.footer, .footer-iframe, .footer-about {
+.footer,
+.footer-iframe,
+.footer-about {
   text-align: center;
   background: url("../images/footer.png") center / contain no-repeat;
   padding: 15px;
@@ -503,21 +539,151 @@ body::before {
   color: #ccc;
 }
 
-/* 📱 Responsive */
-@media (max-width: 1024px) {
-  .movies-grid, .movies-grid2 { grid-template-columns: repeat(3,1fr); }
-}
+/* 📌 Alinear el logo y el título en móviles */
 @media (max-width: 768px) {
-  .movies-grid, .movies-grid2 { grid-template-columns: repeat(2,1fr); }
-  .menu-toggle { display: block; }
-  .nav { 
-    flex-direction: column; 
-    max-height: 0; 
-    overflow: hidden; 
-    transition: max-height 0.3s ease; 
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    background: linear-gradient(180deg, orange 0%, #ff6600 100%);
+    border-bottom: 3px solid #fff;
+    gap: 10px;
   }
-  .nav.active { max-height: 300px; }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .title {
+    font-size: 1.4rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Ajustes de navegación */
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+
+  .menu-toggle {
+    font-size: 28px;
+    margin-top: 5px;
+  }
 }
+
+/* Media queries */
+@media (max-width: 1024px) {
+  .movies-grid2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .movies-grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 480px) {
-  .movies-grid, .movies-grid2 { grid-template-columns: 1fr; }
+  .movies-grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .movies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .movies-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .fights-grid {
+    display: flex;
+    flex-direction: column; /* Acomoda en una sola columna */
+    align-items: center;
+    gap: 20px; /* Espacio entre tarjetas */
+  }
+
+  .fight-card {
+    width: 90%; /* Reduce el ancho en móviles */
+    max-width: 400px; /* No se hace demasiado grande */
+  }
+
+  .fight-card iframe {
+    width: 100%; /* Que los videos ocupen todo el espacio */
+    height: auto; /* Ajusta la altura automáticamente */
+    aspect-ratio: 16/9; /* Mantiene proporción correcta */
+  }
+
+  .fight-card h1,
+  .fight-card p {
+    font-size: 1rem; /* Reduce tamaño de texto en móviles */
+  }
+}
+
+/* 📌 Responsive: Ocultar el menú en mobile hasta que se haga clic */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Se muestra el icono de hamburguesa */
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding-top: 10px;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav.active {
+    max-height: 300px; /* Ajusta el valor según la cantidad de elementos */
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    padding: 8px 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .nav.active .nav-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
