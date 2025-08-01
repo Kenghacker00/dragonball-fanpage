@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes - Dragon Ball Fan Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="manifest" href="images/site.webmanifest" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="header-link" style="text-decoration: none; color: inherit;">
+            <div class="logo-container">
+                <img src="images/DBLOGO.png" alt="Logo" class="logo">
+                <h1 class="title">Dragon Ball Fan Page</h1>
+            </div>
+        </a>
+
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <!-- Menú de navegación -->
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="personajes.html" class="nav-link">Personajes</a>
+            <a href="peliculas.html" class="nav-link">Películas</a>
+            <a href="about.html" class="nav-link">Acerca de nosotros</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Personajes Principales</h2>
+        <div class="characters-container">
+            <!-- Goku -->
+            <div class="character-card" data-sound="sounds/Goku.m4a">
+                <img src="images/Goku.webp" alt="Goku">
+                <div class="character-name">Goku</div>
+                <div class="power-container">
+                    <div class="power-bar goku"></div>
+                </div>
+                <p class="character-description">
+                    El Saiyajin criado en la Tierra. Es el protagonista de Dragon Ball y busca volverse más fuerte sin límites.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Goku" 
+                    target="_blank" 
+                    class="more-info">Más información
+                </a>
+            </div>
+        
+            <!-- Vegeta -->
+            <div class="character-card" data-sound="sounds/Vegeta.m4a">
+                <img src="images/vegeta.webp" alt="Vegeta">
+                <div class="character-name">Vegeta</div>
+                <div class="power-container">
+                    <div class="power-bar vegeta"></div>
+                </div>
+                <p class="character-description">
+                    Príncipe de los Saiyajin y eterno rival de Goku. Su orgullo y determinación lo hacen un guerrero formidable.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Vegeta" 
+                    target="_blank" 
+                    class="more-info">Más información
+                </a>
+            </div>
+        
+            <!-- Piccolo -->
+            <div class="character-card">
+                <img src="images/piccolo.webp" alt="Piccolo">
+                <div class="character-name">Piccolo</div>
+                <div class="power-container">
+                    <div class="power-bar piccolo"></div>
+                </div>
+                <p class="character-description">
+                    Un guerrero Namekiano con un gran intelecto. Inicialmente enemigo de Goku, pero ahora es un aliado clave.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Piccolo" 
+                    target="_blank" 
+                    class="more-info">Más información
+                </a>
+            </div>
+
+            <!-- Krillin -->
+            <div class="character-card">
+                <img src="images/Krilin.webp" alt="Krilin">
+                <div class="character-name">Krilin</div>
+                <div class="power-container">
+                    <div class="power-bar krilin"></div>
+                </div>
+                <p class="character-description">
+                    El mejor amigo de Goku y un guerrero valiente de la Tierra.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Krillin" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Freezer -->
+            <div class="character-card" data-sound="sounds/freezer.m4a">
+                <img src="images/frieza.webp" alt="Freezer">
+                <div class="character-name">Freezer</div>
+                <div class="power-container">
+                    <div class="power-bar frieza"></div>
+                </div>
+                <p class="character-description">
+                    Un tirano galáctico con un inmenso poder y una gran sed de dominación. Uno de los mayores enemigos de Goku.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Freezer" target="_blank" class="more-info">Más información</a>
+            </div>
+        
+            <!-- Gohan -->
+            <div class="character-card">
+                <img src="images/gohan.webp" alt="Gohan">
+                <div class="character-name">Gohan</div>
+                <div class="power-container">
+                    <div class="power-bar gohan"></div>
+                </div>
+                <p class="character-description">
+                    Hijo de Goku. Aunque prefiere la paz, su potencial de combate es inmenso cuando se ve obligado a luchar.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Gohan" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Bardock -->
+            <div class="character-card" data-sound="sounds/Bardock.mp3">
+                <img src="images/Bardock.webp" alt="Bardock">
+                <div class="character-name">Bardock</div>
+                <div class="power-container">
+                    <div class="power-bar Bardock"></div>
+                </div>
+                <p class="character-description">
+                    El valiente padre de Goku. Un guerrero saiyajin que luchó con honor hasta el final contra Freezer.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Bardock" target="_blank" class="more-info">Más información</a>
+            </div>
+        
+            <!-- Broly -->
+            <div class="character-card" data-sound="sounds/Broly.mp3">
+                <img src="images/broly.webp" alt="Broly">
+                <div class="character-name">Broly</div>
+                <div class="power-container">
+                    <div class="power-bar broly"></div>
+                </div>
+                <p class="character-description">
+                    Un Saiyajin legendario con un poder colosal. Su fuerza crece sin control cuando se desata su furia.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Broly" target="_blank" class="more-info">Más información</a>
+            </div>
+        
+            <!-- Bills -->
+            <div class="character-card" data-sound="sounds/Bills.m4a">
+                <img src="images/bills.webp" alt="Bills">
+                <div class="character-name">Bills</div>
+                <div class="power-container">
+                    <div class="power-bar beerus"></div>
+                </div>
+                <p class="character-description">
+                    Dios de la Destrucción del Universo 7. Es extremadamente poderoso y ama la comida deliciosa.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Bills" target="_blank" class="more-info">Más información</a>
+            </div>
+        
+            <!-- Whis -->
+            <div class="character-card">
+                <img src="images/whis.webp" alt="Whis">
+                <div class="character-name">Whis</div>
+                <div class="power-container">
+                    <div class="power-bar whis"></div>
+                </div>
+                <p class="character-description">
+                    Ángel y maestro de Bills. Es uno de los seres más poderosos del multiverso y tiene una gran calma.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Whis" target="_blank" class="more-info">Más información</a>
+            </div>
+        
+            <!-- Zeno Sama -->
+            <div class="character-card">
+                <img src="images/Zeno.webp" alt="Zeno">
+                <div class="character-name">Zeno Sama</div>
+                <div class="power-container">
+                    <div class="power-bar zeno"></div>
+                </div>
+                <p class="character-description">
+                    El Rey de Todo. Es el ser supremo en Dragon Ball y puede destruir universos con solo un gesto.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Zeno" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Cell -->
+            <div class="character-card">
+                <img src="images/cell.webp" alt="Cell">
+                <div class="character-name">Cell</div>
+                <div class="power-container">
+                    <div class="power-bar cell"></div>
+                </div>
+                <p class="character-description">
+                    Un bioandroide creado por el Dr. Gero con las células de los mejores guerreros.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Cell" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Gamma 1 -->
+            <div class="character-card">
+                <img src="images/gamma1.webp" alt="Gamma 1">
+                <div class="character-name">Gamma 1</div>
+                <div class="power-container">
+                    <div class="power-bar gamma1"></div>
+                </div>
+                <p class="character-description">
+                    El primer androide de Hedo, valiente y con un gran sentido de justicia.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Gamma_1" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Gamma 2 -->
+            <div class="character-card">
+                <img src="images/gamma2.webp" alt="Gamma 2">
+                <div class="character-name">Gamma 2</div>
+                <div class="power-container">
+                    <div class="power-bar gamma2"></div>
+                </div>
+                <p class="character-description">
+                    El segundo androide de Hedo, valiente y con un gran sentido de justicia.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Gamma_2" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Dr. Hedo -->
+            <div class="character-card">
+                <img src="images/drhedo.webp" alt="Dr. Hedo">
+                <div class="character-name">Dr. Hedo</div>
+                <div class="power-container">
+                    <div class="power-bar drhedo"></div>
+                </div>
+                <p class="character-description">
+                    El Dr. Hedo es el creador de los androides Gamma 1 y Gamma 2. Es un científico altamente especializado.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Dr._Hedo" target="_blank" class="more-info">Más información</a>
+            </div>
+        
+            <!-- Goku Black -->
+            <div class="character-card" data-sound="sounds/BlackG.mp3">
+                <img src="images/Goku_Black.webp" alt="Goku Black">
+                <div class="character-name">Goku Black</div>
+                <div class="power-container">
+                    <div class="power-bar Black"></div>
+                </div>
+                <p class="character-description">
+                    Zamasu en el cuerpo de Goku. Es un dios con un poder inmenso y un gran odio por los mortales.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Goku_Black" target="_blank" class="more-info">Más información</a>
+            </div>
+        
+            <!-- Gogeta -->
+            <div class="character-card" data-sound="sounds/Gogeta.m4a">
+                <img src="images/gogeta.webp" alt="Gogeta">
+                <div class="character-name">Gogeta</div>
+                <div class="power-container">
+                    <div class="power-bar Gogeta"></div>
+                </div>
+                <p class="character-description">
+                    La fusión de Goku y Vegeta con la danza Metamoru. Es un guerrero increíblemente fuerte y veloz.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Gogeta" target="_blank" class="more-info">Más información</a>
+            </div>
+        
+            <!-- Vegetto -->
+            <div class="character-card" data-sound="sounds/Vegetto.m4a">
+                <img src="images/vegetto.webp" alt="Vegetto">
+                <div class="character-name">Vegetto</div>
+                <div class="power-container">
+                    <div class="power-bar Vegetto"></div>
+                </div>
+                <p class="character-description">
+                    La fusión de Goku y Vegeta usando los pendientes Potara. Su poder es colosal y su confianza absoluta.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Vegetto" target="_blank" class="more-info">Más información</a>
+            </div>
+        
+            <!-- Jiren -->
+            <div class="character-card">
+                <img src="images/Jiren.webp" alt="Jiren">
+                <div class="character-name">Jiren</div>
+                <div class="power-container">
+                    <div class="power-bar Jiren"></div>
+                </div>
+                <p class="character-description">
+                    El guerrero más fuerte del Universo 11. Posee una fuerza que supera a los Dioses de la Destrucción.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Jiren" target="_blank" class="more-info">Más información</a>
+            </div>
+        
+            <!-- Daishinkan -->
+            <div class="character-card">
+                <img src="images/Daishinkan.webp" alt="Daishinkan">
+                <div class="character-name">Daishinkan</div>
+                <div class="power-container">
+                    <div class="power-bar Daishinkan"></div>
+                </div>
+                <p class="character-description">
+                    El Gran Sacerdote, uno de los seres más poderosos. Sirve a Zeno y entrena a los ángeles.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Daishinkan" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Vados -->
+            <div class="character-card">
+                <img src="images/vados.webp" alt="Vados">
+                <div class="character-name">Vados</div>
+                <div class="power-container">
+                    <div class="power-bar vados"></div>
+                </div>
+                <p class="character-description">
+                    Hermana de Whis y ángel del Universo 6, mentora de Champa.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Vados" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Champa -->
+            <div class="character-card">
+                <img src="images/champa.webp" alt="Champa">
+                <div class="character-name">Champa</div>
+                <div class="power-container">
+                    <div class="power-bar champa"></div>
+                </div>
+                <p class="character-description">
+                    Dios de la Destrucción del Universo 6, hermano de Bills.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Champa" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Granola -->
+            <div class="character-card">
+                <img src="images/granola.webp" alt="Granola">
+                <div class="character-name">Granola</div>
+                <div class="power-container">
+                    <div class="power-bar granola"></div>
+                </div>
+                <p class="character-description">
+                    Último sobreviviente de los Cerealjin, busca venganza contra Freezer.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Granola" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Gas -->
+            <div class="character-card">
+                <img src="images/gas.webp" alt="Gas">
+                <div class="character-name">Gas</div>
+                <div class="power-container">
+                    <div class="power-bar gas"></div>
+                </div>
+                <p class="character-description">
+                    Guerrero más fuerte de los Heeters, enemigo de Granola y Goku.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Gas" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Zamasu -->
+            <div class="character-card">
+                <img src="images/zamasu.webp" alt="Zamasu">
+                <div class="character-name">Zamasu</div>
+                <div class="power-container">
+                    <div class="power-bar zamasu"></div>
+                </div>
+                <p class="character-description">
+                    Kaio-shin aprendiz del Universo 10 con odio hacia los mortales.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Zamasu" target="_blank" class="more-info">Más información</a>
+            </div>
+
+
+            <!-- Gotenks -->
+            <div class="character-card">
+                <img src="images/gotenks.webp" alt="Gotenks">
+                <div class="character-name">Gotenks</div>
+                <div class="power-container">
+                    <div class="power-bar gotenks"></div>
+                </div>
+                <p class="character-description">
+                    Fusión de Goten y Trunks, famoso por sus técnicas y actitud arrogante.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Gotenks" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Androide 16 -->
+            <div class="character-card">
+                <img src="images/android16.webp" alt="Androide 16">
+                <div class="character-name">Androide 16</div>
+                <div class="power-container">
+                    <div class="power-bar android16"></div>
+                </div>
+                <p class="character-description">
+                    Creado por el Dr. Gero, pacifista pero con gran poder de combate.
+                </p>
+                <a href="https://dragonball.fandom.com/es/wiki/Androide_N%C3%BAmero_16" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Androide 17 -->
+            <div class="character-card">
+                <img src="images/android17.webp" alt="Androide 17">
+                <div class="character-name">Androide 17</div>
+                <div class="power-container">
+                    <div class="power-bar android17"></div>
+                </div>
+                <p class="character-description">
+                    Hermano de Androide 18, gran estratega y ganador del Torneo del Poder.
+                </p>
+                <a href="https://dragonball.fandom.com/es/wiki/Androide_N%C3%BAmero_17" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Androide 18 -->
+            <div class="character-card">
+                <img src="images/android18.webp" alt="Androide 18">
+                <div class="character-name">Androide 18</div>
+                <div class="power-container">
+                    <div class="power-bar android18"></div>
+                </div>
+                <p class="character-description">
+                    Androide convertida en humana, esposa de Krillin y madre de Marron.
+                </p>
+                <a href="https://dragonball.fandom.com/es/wiki/Androide_N%C3%BAmero_18" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Androide 19 -->
+            <div class="character-card">
+                <img src="images/android19.webp" alt="Androide 19">
+                <div class="character-name">Androide 19</div>
+                <div class="power-container">
+                    <div class="power-bar android19"></div>
+                </div>
+                <p class="character-description">
+                    Creado por el Dr. Gero, el segundo androide de Dragon Ball Z.
+                </p>
+                <a href="https://dragonball.fandom.com/es/wiki/Androide_N%C3%BAmero_19" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Androide 20 -->
+            <div class="character-card">
+                <img src="images/android20.webp" alt="Androide 20">
+                <div class="character-name">Androide 20</div>
+                <div class="power-container">
+                    <div class="power-bar android20"></div>
+                </div>
+                <p class="character-description">
+                    Creado por el Dr. Gero, el tercero androide de Dragon Ball Z.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Dr._Gero" target="_blank" class="more-info">Más información</a>
+            </div>
+
+            <!-- Androide 21 -->
+            <div class="character-card">
+                <img src="images/android21.webp" alt="Androide 21">
+                <div class="character-name">Androide 21</div>
+                <div class="power-container">
+                    <div class="power-bar android21"></div>
+                </div>
+                <p class="character-description">
+                    Creado por el Dr. Gero, el cuarto androide de Dragon Ball Z.
+                </p>
+                <a href="https://dragonball.fandom.com/es/wiki/Androide_N%C3%BAmero_21" target="_blank" class="more-info">Más información</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        © 2025 Dragon Ball Fan Page. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var characterCards = document.querySelectorAll('.character-card');
+    
+            characterCards.forEach(function(card) {
+                var soundPath = card.getAttribute('data-sound');
+                var sound = new Audio(soundPath);
+    
+                card.addEventListener('click', function() {
+                    sound.play();
+                });
+            });
+        });
+
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

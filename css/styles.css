@@ -1,0 +1,523 @@
+/* 🌌 General Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Fondo con blur */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url("../images/Goku-fondo.jpg") no-repeat center center / cover;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* 📌 Header */
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  z-index: 1000;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/banner.png") no-repeat center / cover;
+  z-index: -1;
+}
+
+/* 📌 Logo y título */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+/* 📌 Navegación */
+.nav {
+  display: flex;
+  gap: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.nav-link {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* 📌 Botón menú hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* 🌌 Main content */
+.main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* 🎬 Movies Grid */
+.movies-grid, .movies-grid2 {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+.movies-grid {
+  grid-template-columns: repeat(6, 1fr);
+}
+.movies-grid2 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* 🎬 Movie Cards */
+.movie-card, .movie-card2 {
+  position: relative;
+  background: #2a2a2a;
+  border: 4px solid orange;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+.movie-card:hover, .movie-card2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.movie-image, .movie-image2 {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 3px solid #ffd700;
+}
+.movie-title, .movie-title2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #ffd700;
+}
+.movie-description, .movie-description2 {
+  font-size: 0.9rem;
+  color: #fff;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+.movie-info {
+  background: rgba(0,0,0,0.8);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #fff;
+  margin-top: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.movie-info:hover {
+  background: rgba(0,0,0,0.9);
+}
+/* Botón Play en hover */
+.movie-card::before, .movie-card2::before {
+  content: url("../images/Play-Button.png");
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 30%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+.movie-card:hover::before, .movie-card2:hover::before {
+  opacity: 1;
+}
+
+/* ⚔️ Fights */
+.fights-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.fight-card {
+  flex: 0 1 calc(50% - 20px);
+  max-width: 560px;
+  border-radius: 10px;
+  border: 5px solid orange;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.fight-card iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+  border-radius: 10px;
+}
+.fight-card h1, .fight-card p {
+  text-align: center;
+  background: orange;
+  margin: 10px 0;
+}
+
+/* 📌 About */
+.about-section {
+  background: black;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border: 5px solid orange;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+.about-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* 👤 Characters */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.characters-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+.character-card {
+  width: 250px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: orange 5px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.character-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+.character-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 12px;
+  padding: 5px;
+  animation: float 3s ease-in-out infinite;
+}
+.character-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff8c00;
+}
+/* Descripción con difuminado */
+.character-description {
+  font-size: 0.9rem;
+  color: #333;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 8px;
+  line-height: 1.4;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  max-height: 100px; /* controla cuánta descripción se ve */
+}
+
+/* Botón integrado al difuminado */
+.more-info {
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  background: orange;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Mostrar al hacer hover */
+.character-card:hover .more-info {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.more-info:hover {
+  background: #ff6600;
+}
+
+/* ⚡ Power Bars */
+.power-container {
+  width: 100%;
+  background: #ddd;
+  border-radius: 5px;
+}
+.power-bar {
+  height: 15px;
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+/* Colores personalizados (ejemplo: goku, vegeta, etc.) */
+/* ... puedes mantener tus clases de colores aquí sin cambios ... */
+/* Character power colors */
+.goku {
+  background-color: #ff6600;
+  width: 90%;
+}
+.vegeta {
+  background-color: #0000ff;
+  width: 90%;
+}
+.piccolo {
+  background-color: #008000;
+  width: 80%;
+}
+.frieza {
+  background-color: #800080;
+  width: 99%;
+}
+.gohan {
+  background-color: #ff0000;
+  width: 90%;
+}
+.cell {
+  background-color: #556b2f;
+  width: 70%;
+}
+.buu {
+  background-color: #ff69b4;
+  width: 75%;
+}
+.broly {
+  background-color: #32cd32;
+  width: 100%;
+}
+.beerus {
+  background-color: #9400d3;
+  width: 100%;
+}
+.whis {
+  background-color: #00ffff;
+  width: 100%;
+}
+.zeno {
+  background-color: #9500ff;
+  width: 100%;
+}
+.gamma1 {
+  background-color: #ff0707;
+  width: 90%;
+}
+.gamma2 {
+  background-color: #0000ff;
+  width: 90%;
+}
+.drhedo {
+  background-color: #04a5b0;
+  width: 10%;
+}
+.Black {
+  background-color: #3c005a;
+  width: 90%;
+}
+.Gogeta {
+  background-color: #0077cc;
+  width: 100%;
+}
+.Vegetto {
+  background-color: #000ea4;
+  width: 100%;
+}
+.Jiren {
+  background-color: #ff0000;
+  width: 90%;
+}
+.krilin {
+  background-color: #ffb300;
+  width: 30%;
+}
+.Trunks {
+  background-color: #ff00ff;
+  width: 80%;
+}
+.Bardock {
+  background-color: #800000;
+  width: 40%;
+}
+.Daishinkan {
+  background-color: #00f7ff;
+  width: 100%;
+}
+.Hit {
+  background-color: #b700ff;
+  width: 80%;
+}
+.vados {
+  background-color: #00ffff;
+  width: 100%;
+}
+.champa {
+  background-color: #9400d3;
+  width: 90%;
+}
+.granola {
+  background-color: #32cd92;
+  width: 80%;
+}
+.gas {
+  background-color: #00ffea;
+  width: 80%;
+}
+.zamasu {
+  background-color: #02bd4d;
+  width: 60%;
+}
+.android16 {
+  background-color: #44d700;
+  width: 40%;
+}
+.android17 {
+  background-color: #0da000;
+  width: 85%;
+}
+.android18 {
+  background-color: #fbff00;
+  width: 75%;
+}
+.gotenks {
+  background-color: #e2ea00;
+  width: 60%;
+}
+.android19 {
+  background-color: #b10000;
+  width: 25%;
+}
+.android20 {
+  background-color: #faff75;
+  width: 20%;
+}
+.android21 {
+  background-color: #ff00f2;
+  width: 80%;
+}
+
+/* 🎥 Trailer Page */
+#movie-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.trailer-container {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+#trailer-frame {
+  border: 4px solid #ffcc00;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255,204,0,0.7);
+}
+
+/* 💬 Comments Section */
+.comments-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 25px;
+  background: rgba(0,0,0,0.85);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255,153,0,0.6);
+}
+.comments-section h3 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+  color: #ffcc00;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* 📌 Footer */
+.footer, .footer-iframe, .footer-about {
+  text-align: center;
+  background: url("../images/footer.png") center / contain no-repeat;
+  padding: 15px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .movies-grid, .movies-grid2 { grid-template-columns: repeat(3,1fr); }
+}
+@media (max-width: 768px) {
+  .movies-grid, .movies-grid2 { grid-template-columns: repeat(2,1fr); }
+  .menu-toggle { display: block; }
+  .nav { 
+    flex-direction: column; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease; 
+  }
+  .nav.active { max-height: 300px; }
+}
+@media (max-width: 480px) {
+  .movies-grid, .movies-grid2 { grid-template-columns: 1fr; }
+}
