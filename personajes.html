@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personajes - Dragon Ball Fan Page</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
     <link rel="shortcut icon" href="images/favicon.ico" />
@@ -37,8 +41,19 @@
         <h2 class="section-title">Personajes Principales</h2>
         <div class="characters-container">
             <!-- Goku -->
-            <div class="character-card" data-sound="sounds/Goku.m4a">
-                <img src="images/Goku.webp" alt="Goku">
+            <div class="character-card" data-sound="sounds/">
+                <div class="carousel">
+                    <div><img src="images/Goku.webp" alt="Goku base"></div>
+                    <div><img src="images/GokuSSJ.webp" alt="Goku SSJ"></div>
+                    <div><img src="images/GokuSSJ2.webp" alt="Goku SSJ2"></div>
+                    <div><img src="images/GokuSSJ3.webp" alt="Goku SSJ3"></div>
+                    <div><img src="images/GokuSSJ4.webp" alt="Goku SSJ4"></div>
+                    <div><img src="images/GokuSSJGOD.png" alt="Goku SSJGOD"></div>
+                    <div><img src="images/GokuSSJBlue.png" alt="Goku SSJBlue"></div>
+                    <div><img src="images/GokuSSJBlueKaioken.png" alt="Goku SSJBlueKaioken"></div>
+                    <div><img src="images/GokuUltraInstinct.webp" alt="Goku Ultra Instinto"></div>
+                    <div><img src="images/GokuMaster.webp" alt="Goku Instinto Dominado"></div>
+                </div>
                 <div class="character-name">Goku</div>
                 <div class="power-container">
                     <div class="power-bar goku"></div>
@@ -47,14 +62,23 @@
                     El Saiyajin criado en la Tierra. Es el protagonista de Dragon Ball y busca volverse más fuerte sin límites.
                 </p>
                 <a href="https://dragonball.fandom.com/wiki/Goku" 
-                    target="_blank" 
-                    class="more-info">Más información
-                </a>
+                target="_blank" 
+                class="more-info">Más información</a>
             </div>
+
         
             <!-- Vegeta -->
             <div class="character-card" data-sound="sounds/Vegeta.m4a">
-                <img src="images/vegeta.webp" alt="Vegeta">
+                <div class="carousel">
+                    <div><img src="images/vegeta.webp" alt="Vegeta base"></div>
+                    <div><img src="images/VegetaSSJ.webp" alt="VegetaSSJ"></div>
+                    <div><img src="images/VegetaSSJ2.webp" alt="Vegeta SSJ2"></div>
+                    <div><img src="images/VegetaSSJ3.png" alt="Vegeta SSJ3"></div>
+                    <div><img src="images/VegetaSSJGod.webp" alt="Vegeta SSJGOD"></div>
+                    <div><img src="images/VegetaSSJBlue.webp" alt="Vegeta SSJBlue"></div>
+                    <div><img src="images/VegetaSSJBLueEvolution.webp" alt="Vegeta SSJBlueEvolution"></div>
+                    <div><img src="images/VegetaUltraEgo.png" alt="Vegeta Ultra Ego"></div>
+                </div>
                 <div class="character-name">Vegeta</div>
                 <div class="power-container">
                     <div class="power-bar vegeta"></div>
@@ -99,7 +123,11 @@
 
             <!-- Freezer -->
             <div class="character-card" data-sound="sounds/freezer.m4a">
-                <img src="images/frieza.webp" alt="Freezer">
+                <div class="carousel">
+                    <div><img src="images/frieza.webp" alt="Frieza Forma Final"></div>
+                    <div><img src="images/GoldenFrieza.webp" alt="Frieza Golden"></div>
+                    <div><img src="images/BlackFrieza.webp" alt="Frieza Black"></div>
+                </div>
                 <div class="character-name">Freezer</div>
                 <div class="power-container">
                     <div class="power-bar frieza"></div>
@@ -112,7 +140,12 @@
         
             <!-- Gohan -->
             <div class="character-card">
-                <img src="images/gohan.webp" alt="Gohan">
+                <div class="carousel">
+                    <div><img src="images/gohan.webp" alt="Gohan Base"></div>
+                    <div><img src="images/GohanSSJ.png" alt="Gohan SSJ"></div>
+                    <div><img src="images/GohanDefinitivo.webp" alt="Gohan Mistico"></div>
+                    <div><img src="images/GohanBeast.png" alt="Gohan Beast"></div>
+                </div>
                 <div class="character-name">Gohan</div>
                 <div class="power-container">
                     <div class="power-bar gohan"></div>
@@ -227,6 +260,19 @@
                 <a href="https://dragonball.fandom.com/wiki/Gamma_2" target="_blank" class="more-info">Más información</a>
             </div>
 
+            <!-- Bulma -->
+            <div class="character-card">
+                <img src="images/Bulma.png" alt="Bulma">
+                <div class="character-name">Bulma</div>
+                <div class="power-container">
+                    <div class="power-bar bulma"></div>
+                </div>
+                <p class="character-description">
+                    Una de las mentes más brillantes de la Tierra. Inventora del radar del dragón y pilar del grupo Z. Su ingenio y determinación han sido clave en innumerables aventuras.
+                </p>
+                <a href="https://dragonball.fandom.com/wiki/Bulma" target="_blank" class="more-info">Más información</a>
+            </div>
+
             <!-- Dr. Hedo -->
             <div class="character-card">
                 <img src="images/drhedo.webp" alt="Dr. Hedo">
@@ -242,7 +288,11 @@
         
             <!-- Goku Black -->
             <div class="character-card" data-sound="sounds/BlackG.mp3">
-                <img src="images/Goku_Black.webp" alt="Goku Black">
+                <div class="carousel">
+                    <div><img src="images/Goku_Black.webp" alt="Goku Black Base"></div>
+                    <div><img src="images/GokuBlackSSJ.webp" alt="Goku Black SSJ"></div>
+                    <div><img src="images/GokuBlackSSJRose.webp" alt="Goku Black SSJ Rose"></div>
+                </div>
                 <div class="character-name">Goku Black</div>
                 <div class="power-container">
                     <div class="power-bar Black"></div>
@@ -255,7 +305,12 @@
         
             <!-- Gogeta -->
             <div class="character-card" data-sound="sounds/Gogeta.m4a">
-                <img src="images/gogeta.webp" alt="Gogeta">
+                <div class="carousel">
+                    <div><img src="images/gogeta.webp" alt="Gogeta Base"></div>
+                    <div><img src="images/GogetaSSJ.png" alt="Gogeta SSJ"></div>
+                    <div><img src="images/GogetaSSJGod.webp" alt="Gogeta SSJ God"></div>
+                    <div><img src="images/GogetaSSJBlue.png" alt="Gogeta Blue"></div>
+                </div>
                 <div class="character-name">Gogeta</div>
                 <div class="power-container">
                     <div class="power-bar Gogeta"></div>
@@ -268,7 +323,12 @@
         
             <!-- Vegetto -->
             <div class="character-card" data-sound="sounds/Vegetto.m4a">
-                <img src="images/vegetto.webp" alt="Vegetto">
+                <div class="carousel">
+                    <div><img src="images/vegetto.webp" alt="Vegetto Base"></div>
+                    <div><img src="images/VegettoSSJ.png" alt="Vegetto SSJ"></div>
+                    <div><img src="images/VegettoSSJGod.png" alt="Vegetto SSJ God"></div>
+                    <div><img src="images/VegettoSSJBlue.png" alt="Vegetto Blue"></div>
+                </div>
                 <div class="character-name">Vegetto</div>
                 <div class="power-container">
                     <div class="power-bar Vegetto"></div>
@@ -471,18 +531,34 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener("DOMContentLoaded", () => {
+            // 🎵 Sonidos
             var characterCards = document.querySelectorAll('.character-card');
-    
             characterCards.forEach(function(card) {
                 var soundPath = card.getAttribute('data-sound');
-                var sound = new Audio(soundPath);
-    
-                card.addEventListener('click', function() {
-                    sound.play();
+                if (soundPath) { // 👈 evita error si no hay sonido
+                    var sound = new Audio(soundPath);
+                    card.addEventListener('click', function() {
+                        sound.play();
+                    });
+                }
+            });
+
+            // 🎠 Carrusel
+            $(document).ready(function(){
+            $('.carousel').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,   // Flechas ON
+                dots: false,     // Puntitos ON
+                autoplay: true,
+                centerMode: false,
+                adaptiveHeight: true
                 });
             });
         });
+
 
         function toggleMenu() {
             const nav = document.querySelector('.nav');
